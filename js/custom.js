@@ -97,7 +97,7 @@ $(document).ready(function() {
         firstName = $("#signup-firstName").val();
         lastName = $("#signup-lastName").val();
         eMail = $("#signup-eMail").val();
-        password = $("#signup-password").val();
+        //password = $("#signup-password").val();
         confirmPass = $("#signup-pwVerify").val();
 
         if(!firstName || !lastName || !eMail || !password){
@@ -113,17 +113,17 @@ $(document).ready(function() {
                 $("#email-err").removeClass("hidden");
                 $("#email-err").text(" *E-mail field required");
             } 
-            if (!password){
+            /*if (!password){
                 $("#password-err").removeClass("hidden");
                 $("#password-err").text(" *Password field required");
-            } 
+            } */
         } else if (eMail.indexOf('@') == -1 || eMail.indexOf('.') == -1){
                 $("#email-err").removeClass("hidden");
                 $("#email-err").text(" *Invalid e-mail");
-        } else if (password != confirmPass){
+        } /*else if (password != confirmPass){
                 $("#password-err").removeClass("hidden");
                 $("#password-err").text(" *Passwords do not match");
-        }   else {
+        }*/   else {
             user = {
                 subscription:{
                     type:type,
@@ -132,7 +132,7 @@ $(document).ready(function() {
                 firstName:firstName,
                 lastName:lastName,
                 eMail:eMail,
-                password:password,
+                //password:password,
             }
             $(".sign-up").animate({height:"0px"},"slow",function(){
                 document.getElementById("signup-form").reset();
